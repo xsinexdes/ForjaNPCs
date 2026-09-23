@@ -1,0 +1,28 @@
+name: ForjaNPCs
+version: ${project.version}
+main: com.kurjr.forjanpcs.ForjaNPCsPlugin
+api-version: "1.21"
+author: Kurjr
+softdepend: [BetonQuest, PlaceholderAPI]
+description: Plugin propio de NPCs (entidades reales) con patrulla/wander y gancho a BetonQuest.
+
+commands:
+  forjanpc:
+    description: Comando principal de ForjaNPCs
+    aliases: [fnpc]
+    usage: |
+      /forjanpc create <tipo_entidad> <nombre...>
+      /forjanpc remove <id>
+      /forjanpc list
+      /forjanpc select <id>
+      /forjanpc waypoint add
+      /forjanpc waypoint clear
+      /forjanpc mode <patrol|wander|combo|none>
+      /forjanpc conversation <conversationId>
+      /forjanpc look <on|off> [radio]
+    permission: forjanpcs.admin
+
+permissions:
+  forjanpcs.admin:
+    description: Permite administrar los NPCs de ForjaNPCs
+    default: op
